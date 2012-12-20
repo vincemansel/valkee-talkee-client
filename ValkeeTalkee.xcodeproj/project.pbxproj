@@ -1,0 +1,723 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		38CB811EF29D449DAFD2D16C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB51FA578A44FE581F3593E /* libPods.a */; };
+		A8B67EF2167FF8FD00BFF575 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B67EF1167FF8FD00BFF575 /* UIKit.framework */; };
+		A8B67EF4167FF8FD00BFF575 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B67EF3167FF8FD00BFF575 /* Foundation.framework */; };
+		A8B67EF6167FF8FD00BFF575 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B67EF5167FF8FD00BFF575 /* CoreGraphics.framework */; };
+		A8B67EF8167FF8FD00BFF575 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B67EF7167FF8FD00BFF575 /* CoreData.framework */; };
+		A8B67EFE167FF8FD00BFF575 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8B67EFC167FF8FD00BFF575 /* InfoPlist.strings */; };
+		A8B67F00167FF8FD00BFF575 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B67EFF167FF8FD00BFF575 /* main.m */; };
+		A8B67F04167FF8FD00BFF575 /* VTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B67F03167FF8FD00BFF575 /* VTAppDelegate.m */; };
+		A8B67F06167FF8FD00BFF575 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A8B67F05167FF8FD00BFF575 /* Default.png */; };
+		A8B67F08167FF8FD00BFF575 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8B67F07167FF8FD00BFF575 /* Default@2x.png */; };
+		A8B67F0A167FF8FD00BFF575 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8B67F09167FF8FD00BFF575 /* Default-568h@2x.png */; };
+		A8B67F0D167FF8FD00BFF575 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8B67F0B167FF8FD00BFF575 /* MainStoryboard_iPhone.storyboard */; };
+		A8B67F10167FF8FD00BFF575 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8B67F0E167FF8FD00BFF575 /* MainStoryboard_iPad.storyboard */; };
+		A8B67F13167FF8FD00BFF575 /* ValkeeTalkee.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A8B67F11167FF8FD00BFF575 /* ValkeeTalkee.xcdatamodeld */; };
+		A8B67F16167FF8FD00BFF575 /* VTMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B67F15167FF8FD00BFF575 /* VTMasterViewController.m */; };
+		A8B67F19167FF8FD00BFF575 /* VTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B67F18167FF8FD00BFF575 /* VTDetailViewController.m */; };
+		A8B67F21167FF8FD00BFF575 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B67F20167FF8FD00BFF575 /* SenTestingKit.framework */; };
+		A8B67F22167FF8FD00BFF575 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B67EF1167FF8FD00BFF575 /* UIKit.framework */; };
+		A8B67F23167FF8FD00BFF575 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B67EF3167FF8FD00BFF575 /* Foundation.framework */; };
+		A8B67F24167FF8FD00BFF575 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B67EF7167FF8FD00BFF575 /* CoreData.framework */; };
+		A8B67F2C167FF8FD00BFF575 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8B67F2A167FF8FD00BFF575 /* InfoPlist.strings */; };
+		A8B67F2F167FF8FD00BFF575 /* ValkeeTalkeeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B67F2E167FF8FD00BFF575 /* ValkeeTalkeeTests.m */; };
+		A8B67F4E167FFACC00BFF575 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B67F4D167FFACC00BFF575 /* libicucore.dylib */; };
+		A8B67F50167FFAD600BFF575 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B67F4F167FFAD600BFF575 /* CFNetwork.framework */; };
+		A8B67F52167FFADD00BFF575 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B67F51167FFADD00BFF575 /* Security.framework */; };
+		A8B67F54167FFAE800BFF575 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B67F53167FFAE800BFF575 /* SystemConfiguration.framework */; };
+		A8B67F67168006AD00BFF575 /* opentok.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A8B67F66168006AD00BFF575 /* opentok.bundle */; };
+		A8B67F731680071200BFF575 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B67F681680071200BFF575 /* CoreTelephony.framework */; };
+		A8B67F741680071200BFF575 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B67F691680071200BFF575 /* MobileCoreServices.framework */; };
+		A8B67F751680071200BFF575 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B67F6A1680071200BFF575 /* CoreMedia.framework */; };
+		A8B67F761680071200BFF575 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B67F6B1680071200BFF575 /* AudioToolbox.framework */; };
+		A8B67F771680071200BFF575 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B67F6C1680071200BFF575 /* CoreAudio.framework */; };
+		A8B67F781680071200BFF575 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B67F6D1680071200BFF575 /* CoreVideo.framework */; };
+		A8B67F791680071200BFF575 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B67F6E1680071200BFF575 /* OpenGLES.framework */; };
+		A8B67F7A1680071200BFF575 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B67F6F1680071200BFF575 /* libz.dylib */; };
+		A8B67F7B1680071200BFF575 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B67F701680071200BFF575 /* libstdc++.dylib */; };
+		A8B67F7C1680071200BFF575 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B67F711680071200BFF575 /* QuartzCore.framework */; };
+		A8B67F7D1680071200BFF575 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B67F721680071200BFF575 /* AVFoundation.framework */; };
+		A8B67F8916821AA300BFF575 /* PTPusherConnectionMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B67F8816821AA300BFF575 /* PTPusherConnectionMonitor.m */; };
+		A8B67F8C16821CA200BFF575 /* NSMutableURLRequest+BasicAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B67F8B16821CA200BFF575 /* NSMutableURLRequest+BasicAuth.m */; };
+		A8B67F9616821E6000BFF575 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B67F9516821E6000BFF575 /* NSData+Base64.m */; };
+		A8B67FB616827E3700BFF575 /* Opentok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B67FB516827E3700BFF575 /* Opentok.framework */; };
+		A8B6801616828E8800BFF575 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = A8B6801416828E8800BFF575 /* README.txt */; };
+		A8B680231682910700BFF575 /* libPusher-iphoneos6.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B680221682910700BFF575 /* libPusher-iphoneos6.0.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A8B67F25167FF8FD00BFF575 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A8B67EE4167FF8FD00BFF575 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8B67EEC167FF8FD00BFF575;
+			remoteInfo = ValkeeTalkee;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3DB51FA578A44FE581F3593E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8B67EED167FF8FD00BFF575 /* ValkeeTalkee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValkeeTalkee.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8B67EF1167FF8FD00BFF575 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A8B67EF3167FF8FD00BFF575 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A8B67EF5167FF8FD00BFF575 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A8B67EF7167FF8FD00BFF575 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A8B67EFB167FF8FD00BFF575 /* ValkeeTalkee-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ValkeeTalkee-Info.plist"; sourceTree = "<group>"; };
+		A8B67EFD167FF8FD00BFF575 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A8B67EFF167FF8FD00BFF575 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A8B67F01167FF8FD00BFF575 /* ValkeeTalkee-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ValkeeTalkee-Prefix.pch"; sourceTree = "<group>"; };
+		A8B67F02167FF8FD00BFF575 /* VTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTAppDelegate.h; sourceTree = "<group>"; };
+		A8B67F03167FF8FD00BFF575 /* VTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTAppDelegate.m; sourceTree = "<group>"; };
+		A8B67F05167FF8FD00BFF575 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		A8B67F07167FF8FD00BFF575 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		A8B67F09167FF8FD00BFF575 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		A8B67F0C167FF8FD00BFF575 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		A8B67F0F167FF8FD00BFF575 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		A8B67F12167FF8FD00BFF575 /* ValkeeTalkee.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ValkeeTalkee.xcdatamodel; sourceTree = "<group>"; };
+		A8B67F14167FF8FD00BFF575 /* VTMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTMasterViewController.h; sourceTree = "<group>"; };
+		A8B67F15167FF8FD00BFF575 /* VTMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTMasterViewController.m; sourceTree = "<group>"; };
+		A8B67F17167FF8FD00BFF575 /* VTDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTDetailViewController.h; sourceTree = "<group>"; };
+		A8B67F18167FF8FD00BFF575 /* VTDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTDetailViewController.m; sourceTree = "<group>"; };
+		A8B67F1F167FF8FD00BFF575 /* ValkeeTalkeeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValkeeTalkeeTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8B67F20167FF8FD00BFF575 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		A8B67F29167FF8FD00BFF575 /* ValkeeTalkeeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ValkeeTalkeeTests-Info.plist"; sourceTree = "<group>"; };
+		A8B67F2B167FF8FD00BFF575 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A8B67F2D167FF8FD00BFF575 /* ValkeeTalkeeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ValkeeTalkeeTests.h; sourceTree = "<group>"; };
+		A8B67F2E167FF8FD00BFF575 /* ValkeeTalkeeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ValkeeTalkeeTests.m; sourceTree = "<group>"; };
+		A8B67F4D167FFACC00BFF575 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		A8B67F4F167FFAD600BFF575 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		A8B67F51167FFADD00BFF575 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A8B67F53167FFAE800BFF575 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A8B67F66168006AD00BFF575 /* opentok.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = opentok.bundle; sourceTree = "<group>"; };
+		A8B67F681680071200BFF575 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		A8B67F691680071200BFF575 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		A8B67F6A1680071200BFF575 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		A8B67F6B1680071200BFF575 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A8B67F6C1680071200BFF575 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		A8B67F6D1680071200BFF575 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		A8B67F6E1680071200BFF575 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		A8B67F6F1680071200BFF575 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		A8B67F701680071200BFF575 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		A8B67F711680071200BFF575 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A8B67F721680071200BFF575 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A8B67F8716821AA300BFF575 /* PTPusherConnectionMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTPusherConnectionMonitor.h; sourceTree = "<group>"; };
+		A8B67F8816821AA300BFF575 /* PTPusherConnectionMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTPusherConnectionMonitor.m; sourceTree = "<group>"; };
+		A8B67F8A16821CA200BFF575 /* NSMutableURLRequest+BasicAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+BasicAuth.h"; sourceTree = "<group>"; };
+		A8B67F8B16821CA200BFF575 /* NSMutableURLRequest+BasicAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+BasicAuth.m"; sourceTree = "<group>"; };
+		A8B67F9416821E6000BFF575 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		A8B67F9516821E6000BFF575 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		A8B67F9816821FE300BFF575 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		A8B67FB516827E3700BFF575 /* Opentok.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Opentok.framework; sourceTree = "<group>"; };
+		A8B6800216828E8800BFF575 /* PTEventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTEventListener.h; sourceTree = "<group>"; };
+		A8B6800316828E8800BFF575 /* PTJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTJSON.h; sourceTree = "<group>"; };
+		A8B6800416828E8800BFF575 /* PTJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTJSONParser.h; sourceTree = "<group>"; };
+		A8B6800516828E8800BFF575 /* PTPusher+Testing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PTPusher+Testing.h"; sourceTree = "<group>"; };
+		A8B6800616828E8800BFF575 /* PTPusher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTPusher.h; sourceTree = "<group>"; };
+		A8B6800716828E8800BFF575 /* PTPusherAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTPusherAPI.h; sourceTree = "<group>"; };
+		A8B6800816828E8800BFF575 /* PTPusherChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTPusherChannel.h; sourceTree = "<group>"; };
+		A8B6800916828E8800BFF575 /* PTPusherConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTPusherConnection.h; sourceTree = "<group>"; };
+		A8B6800A16828E8800BFF575 /* PTPusherDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTPusherDelegate.h; sourceTree = "<group>"; };
+		A8B6800B16828E8800BFF575 /* PTPusherErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTPusherErrors.h; sourceTree = "<group>"; };
+		A8B6800C16828E8800BFF575 /* PTPusherEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTPusherEvent.h; sourceTree = "<group>"; };
+		A8B6800D16828E8800BFF575 /* PTPusherEventDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTPusherEventDispatcher.h; sourceTree = "<group>"; };
+		A8B6800E16828E8800BFF575 /* PTPusherEventPublisher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTPusherEventPublisher.h; sourceTree = "<group>"; };
+		A8B6800F16828E8800BFF575 /* PTPusherMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTPusherMacros.h; sourceTree = "<group>"; };
+		A8B6801016828E8800BFF575 /* PTPusherMockConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTPusherMockConnection.h; sourceTree = "<group>"; };
+		A8B6801116828E8800BFF575 /* PTPusherPresenceChannelDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTPusherPresenceChannelDelegate.h; sourceTree = "<group>"; };
+		A8B6801216828E8800BFF575 /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
+		A8B6801416828E8800BFF575 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		A8B680221682910700BFF575 /* libPusher-iphoneos6.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libPusher-iphoneos6.0.a"; sourceTree = "<group>"; };
+		D1DC1C673C774655BF8163FD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A8B67EEA167FF8FD00BFF575 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8B67F54167FFAE800BFF575 /* SystemConfiguration.framework in Frameworks */,
+				A8B67F52167FFADD00BFF575 /* Security.framework in Frameworks */,
+				A8B67F50167FFAD600BFF575 /* CFNetwork.framework in Frameworks */,
+				A8B67F4E167FFACC00BFF575 /* libicucore.dylib in Frameworks */,
+				A8B67EF2167FF8FD00BFF575 /* UIKit.framework in Frameworks */,
+				A8B67EF4167FF8FD00BFF575 /* Foundation.framework in Frameworks */,
+				A8B67EF6167FF8FD00BFF575 /* CoreGraphics.framework in Frameworks */,
+				A8B67EF8167FF8FD00BFF575 /* CoreData.framework in Frameworks */,
+				38CB811EF29D449DAFD2D16C /* libPods.a in Frameworks */,
+				A8B67F731680071200BFF575 /* CoreTelephony.framework in Frameworks */,
+				A8B67F741680071200BFF575 /* MobileCoreServices.framework in Frameworks */,
+				A8B67F751680071200BFF575 /* CoreMedia.framework in Frameworks */,
+				A8B67F761680071200BFF575 /* AudioToolbox.framework in Frameworks */,
+				A8B67F771680071200BFF575 /* CoreAudio.framework in Frameworks */,
+				A8B67F781680071200BFF575 /* CoreVideo.framework in Frameworks */,
+				A8B67F791680071200BFF575 /* OpenGLES.framework in Frameworks */,
+				A8B67F7A1680071200BFF575 /* libz.dylib in Frameworks */,
+				A8B67F7B1680071200BFF575 /* libstdc++.dylib in Frameworks */,
+				A8B67F7C1680071200BFF575 /* QuartzCore.framework in Frameworks */,
+				A8B67F7D1680071200BFF575 /* AVFoundation.framework in Frameworks */,
+				A8B67FB616827E3700BFF575 /* Opentok.framework in Frameworks */,
+				A8B680231682910700BFF575 /* libPusher-iphoneos6.0.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8B67F1B167FF8FD00BFF575 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8B67F21167FF8FD00BFF575 /* SenTestingKit.framework in Frameworks */,
+				A8B67F22167FF8FD00BFF575 /* UIKit.framework in Frameworks */,
+				A8B67F23167FF8FD00BFF575 /* Foundation.framework in Frameworks */,
+				A8B67F24167FF8FD00BFF575 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A8B67EE2167FF8FD00BFF575 = {
+			isa = PBXGroup;
+			children = (
+				A8B67F38167FFA0900BFF575 /* ThirdParty */,
+				A8B67EF9167FF8FD00BFF575 /* ValkeeTalkee */,
+				A8B67F27167FF8FD00BFF575 /* ValkeeTalkeeTests */,
+				A8B67EF0167FF8FD00BFF575 /* Frameworks */,
+				A8B67EEE167FF8FD00BFF575 /* Products */,
+				D1DC1C673C774655BF8163FD /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		A8B67EEE167FF8FD00BFF575 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A8B67EED167FF8FD00BFF575 /* ValkeeTalkee.app */,
+				A8B67F1F167FF8FD00BFF575 /* ValkeeTalkeeTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A8B67EF0167FF8FD00BFF575 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8B67FB516827E3700BFF575 /* Opentok.framework */,
+				A8B67F681680071200BFF575 /* CoreTelephony.framework */,
+				A8B67F691680071200BFF575 /* MobileCoreServices.framework */,
+				A8B67F6A1680071200BFF575 /* CoreMedia.framework */,
+				A8B67F6B1680071200BFF575 /* AudioToolbox.framework */,
+				A8B67F6C1680071200BFF575 /* CoreAudio.framework */,
+				A8B67F6D1680071200BFF575 /* CoreVideo.framework */,
+				A8B67F6E1680071200BFF575 /* OpenGLES.framework */,
+				A8B67F6F1680071200BFF575 /* libz.dylib */,
+				A8B67F701680071200BFF575 /* libstdc++.dylib */,
+				A8B67F711680071200BFF575 /* QuartzCore.framework */,
+				A8B67F721680071200BFF575 /* AVFoundation.framework */,
+				A8B67F53167FFAE800BFF575 /* SystemConfiguration.framework */,
+				A8B67F51167FFADD00BFF575 /* Security.framework */,
+				A8B67F4F167FFAD600BFF575 /* CFNetwork.framework */,
+				A8B67F4D167FFACC00BFF575 /* libicucore.dylib */,
+				A8B67EF1167FF8FD00BFF575 /* UIKit.framework */,
+				A8B67EF3167FF8FD00BFF575 /* Foundation.framework */,
+				A8B67EF5167FF8FD00BFF575 /* CoreGraphics.framework */,
+				A8B67EF7167FF8FD00BFF575 /* CoreData.framework */,
+				A8B67F20167FF8FD00BFF575 /* SenTestingKit.framework */,
+				3DB51FA578A44FE581F3593E /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A8B67EF9167FF8FD00BFF575 /* ValkeeTalkee */ = {
+			isa = PBXGroup;
+			children = (
+				A8B67F02167FF8FD00BFF575 /* VTAppDelegate.h */,
+				A8B67F03167FF8FD00BFF575 /* VTAppDelegate.m */,
+				A8B67F0B167FF8FD00BFF575 /* MainStoryboard_iPhone.storyboard */,
+				A8B67F0E167FF8FD00BFF575 /* MainStoryboard_iPad.storyboard */,
+				A8B67F14167FF8FD00BFF575 /* VTMasterViewController.h */,
+				A8B67F15167FF8FD00BFF575 /* VTMasterViewController.m */,
+				A8B67F17167FF8FD00BFF575 /* VTDetailViewController.h */,
+				A8B67F18167FF8FD00BFF575 /* VTDetailViewController.m */,
+				A8B67F11167FF8FD00BFF575 /* ValkeeTalkee.xcdatamodeld */,
+				A8B67EFA167FF8FD00BFF575 /* Supporting Files */,
+			);
+			path = ValkeeTalkee;
+			sourceTree = "<group>";
+		};
+		A8B67EFA167FF8FD00BFF575 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A8B67EFB167FF8FD00BFF575 /* ValkeeTalkee-Info.plist */,
+				A8B67EFC167FF8FD00BFF575 /* InfoPlist.strings */,
+				A8B67EFF167FF8FD00BFF575 /* main.m */,
+				A8B67F01167FF8FD00BFF575 /* ValkeeTalkee-Prefix.pch */,
+				A8B67F05167FF8FD00BFF575 /* Default.png */,
+				A8B67F07167FF8FD00BFF575 /* Default@2x.png */,
+				A8B67F09167FF8FD00BFF575 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A8B67F27167FF8FD00BFF575 /* ValkeeTalkeeTests */ = {
+			isa = PBXGroup;
+			children = (
+				A8B67F2D167FF8FD00BFF575 /* ValkeeTalkeeTests.h */,
+				A8B67F2E167FF8FD00BFF575 /* ValkeeTalkeeTests.m */,
+				A8B67F28167FF8FD00BFF575 /* Supporting Files */,
+			);
+			path = ValkeeTalkeeTests;
+			sourceTree = "<group>";
+		};
+		A8B67F28167FF8FD00BFF575 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A8B67F29167FF8FD00BFF575 /* ValkeeTalkeeTests-Info.plist */,
+				A8B67F2A167FF8FD00BFF575 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A8B67F38167FFA0900BFF575 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				A8B67F66168006AD00BFF575 /* opentok.bundle */,
+				A8B67F8616821A8F00BFF575 /* PTPusher */,
+			);
+			name = ThirdParty;
+			sourceTree = "<group>";
+		};
+		A8B67F8616821A8F00BFF575 /* PTPusher */ = {
+			isa = PBXGroup;
+			children = (
+				A8B6800016828E8800BFF575 /* libPusher */,
+				A8B67F9816821FE300BFF575 /* Constants.h */,
+				A8B67F9416821E6000BFF575 /* NSData+Base64.h */,
+				A8B67F9516821E6000BFF575 /* NSData+Base64.m */,
+				A8B67F8A16821CA200BFF575 /* NSMutableURLRequest+BasicAuth.h */,
+				A8B67F8B16821CA200BFF575 /* NSMutableURLRequest+BasicAuth.m */,
+				A8B67F8716821AA300BFF575 /* PTPusherConnectionMonitor.h */,
+				A8B67F8816821AA300BFF575 /* PTPusherConnectionMonitor.m */,
+			);
+			name = PTPusher;
+			sourceTree = "<group>";
+		};
+		A8B6800016828E8800BFF575 /* libPusher */ = {
+			isa = PBXGroup;
+			children = (
+				A8B680221682910700BFF575 /* libPusher-iphoneos6.0.a */,
+				A8B6800116828E8800BFF575 /* headers */,
+				A8B6801416828E8800BFF575 /* README.txt */,
+			);
+			path = libPusher;
+			sourceTree = "<group>";
+		};
+		A8B6800116828E8800BFF575 /* headers */ = {
+			isa = PBXGroup;
+			children = (
+				A8B6800216828E8800BFF575 /* PTEventListener.h */,
+				A8B6800316828E8800BFF575 /* PTJSON.h */,
+				A8B6800416828E8800BFF575 /* PTJSONParser.h */,
+				A8B6800516828E8800BFF575 /* PTPusher+Testing.h */,
+				A8B6800616828E8800BFF575 /* PTPusher.h */,
+				A8B6800716828E8800BFF575 /* PTPusherAPI.h */,
+				A8B6800816828E8800BFF575 /* PTPusherChannel.h */,
+				A8B6800916828E8800BFF575 /* PTPusherConnection.h */,
+				A8B6800A16828E8800BFF575 /* PTPusherDelegate.h */,
+				A8B6800B16828E8800BFF575 /* PTPusherErrors.h */,
+				A8B6800C16828E8800BFF575 /* PTPusherEvent.h */,
+				A8B6800D16828E8800BFF575 /* PTPusherEventDispatcher.h */,
+				A8B6800E16828E8800BFF575 /* PTPusherEventPublisher.h */,
+				A8B6800F16828E8800BFF575 /* PTPusherMacros.h */,
+				A8B6801016828E8800BFF575 /* PTPusherMockConnection.h */,
+				A8B6801116828E8800BFF575 /* PTPusherPresenceChannelDelegate.h */,
+				A8B6801216828E8800BFF575 /* SRWebSocket.h */,
+			);
+			path = headers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A8B67EEC167FF8FD00BFF575 /* ValkeeTalkee */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8B67F32167FF8FD00BFF575 /* Build configuration list for PBXNativeTarget "ValkeeTalkee" */;
+			buildPhases = (
+				A8B67EE9167FF8FD00BFF575 /* Sources */,
+				A8B67EEA167FF8FD00BFF575 /* Frameworks */,
+				A8B67EEB167FF8FD00BFF575 /* Resources */,
+				312B1EF1D48345568EFAA194 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ValkeeTalkee;
+			productName = ValkeeTalkee;
+			productReference = A8B67EED167FF8FD00BFF575 /* ValkeeTalkee.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A8B67F1E167FF8FD00BFF575 /* ValkeeTalkeeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8B67F35167FF8FD00BFF575 /* Build configuration list for PBXNativeTarget "ValkeeTalkeeTests" */;
+			buildPhases = (
+				A8B67F1A167FF8FD00BFF575 /* Sources */,
+				A8B67F1B167FF8FD00BFF575 /* Frameworks */,
+				A8B67F1C167FF8FD00BFF575 /* Resources */,
+				A8B67F1D167FF8FD00BFF575 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A8B67F26167FF8FD00BFF575 /* PBXTargetDependency */,
+			);
+			name = ValkeeTalkeeTests;
+			productName = ValkeeTalkeeTests;
+			productReference = A8B67F1F167FF8FD00BFF575 /* ValkeeTalkeeTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A8B67EE4167FF8FD00BFF575 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = VT;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = vincemansel;
+			};
+			buildConfigurationList = A8B67EE7167FF8FD00BFF575 /* Build configuration list for PBXProject "ValkeeTalkee" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A8B67EE2167FF8FD00BFF575;
+			productRefGroup = A8B67EEE167FF8FD00BFF575 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A8B67EEC167FF8FD00BFF575 /* ValkeeTalkee */,
+				A8B67F1E167FF8FD00BFF575 /* ValkeeTalkeeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A8B67EEB167FF8FD00BFF575 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8B67EFE167FF8FD00BFF575 /* InfoPlist.strings in Resources */,
+				A8B67F06167FF8FD00BFF575 /* Default.png in Resources */,
+				A8B67F08167FF8FD00BFF575 /* Default@2x.png in Resources */,
+				A8B67F0A167FF8FD00BFF575 /* Default-568h@2x.png in Resources */,
+				A8B67F0D167FF8FD00BFF575 /* MainStoryboard_iPhone.storyboard in Resources */,
+				A8B67F10167FF8FD00BFF575 /* MainStoryboard_iPad.storyboard in Resources */,
+				A8B67F67168006AD00BFF575 /* opentok.bundle in Resources */,
+				A8B6801616828E8800BFF575 /* README.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8B67F1C167FF8FD00BFF575 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8B67F2C167FF8FD00BFF575 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		312B1EF1D48345568EFAA194 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+		A8B67F1D167FF8FD00BFF575 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A8B67EE9167FF8FD00BFF575 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8B67F00167FF8FD00BFF575 /* main.m in Sources */,
+				A8B67F04167FF8FD00BFF575 /* VTAppDelegate.m in Sources */,
+				A8B67F13167FF8FD00BFF575 /* ValkeeTalkee.xcdatamodeld in Sources */,
+				A8B67F16167FF8FD00BFF575 /* VTMasterViewController.m in Sources */,
+				A8B67F19167FF8FD00BFF575 /* VTDetailViewController.m in Sources */,
+				A8B67F8916821AA300BFF575 /* PTPusherConnectionMonitor.m in Sources */,
+				A8B67F8C16821CA200BFF575 /* NSMutableURLRequest+BasicAuth.m in Sources */,
+				A8B67F9616821E6000BFF575 /* NSData+Base64.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8B67F1A167FF8FD00BFF575 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8B67F2F167FF8FD00BFF575 /* ValkeeTalkeeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A8B67F26167FF8FD00BFF575 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8B67EEC167FF8FD00BFF575 /* ValkeeTalkee */;
+			targetProxy = A8B67F25167FF8FD00BFF575 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A8B67EFC167FF8FD00BFF575 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8B67EFD167FF8FD00BFF575 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A8B67F0B167FF8FD00BFF575 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8B67F0C167FF8FD00BFF575 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		A8B67F0E167FF8FD00BFF575 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8B67F0F167FF8FD00BFF575 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		A8B67F2A167FF8FD00BFF575 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8B67F2B167FF8FD00BFF575 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A8B67F30167FF8FD00BFF575 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = armv7;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = armv7;
+			};
+			name = Debug;
+		};
+		A8B67F31167FF8FD00BFF575 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = armv7;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = armv7;
+			};
+			name = Release;
+		};
+		A8B67F33167FF8FD00BFF575 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1DC1C673C774655BF8163FD /* Pods.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../github/iosVideoChat/OpenTok-iOS-Hello-World/opentok-ios-sdk-webrtc\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ValkeeTalkee/ValkeeTalkee-Prefix.pch";
+				INFOPLIST_FILE = "ValkeeTalkee/ValkeeTalkee-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/libPusher\"",
+					"\"$(SRCROOT)/libPusher/headers\"",
+				);
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A8B67F34167FF8FD00BFF575 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1DC1C673C774655BF8163FD /* Pods.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../github/iosVideoChat/OpenTok-iOS-Hello-World/opentok-ios-sdk-webrtc\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ValkeeTalkee/ValkeeTalkee-Prefix.pch";
+				INFOPLIST_FILE = "ValkeeTalkee/ValkeeTalkee-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/libPusher\"",
+					"\"$(SRCROOT)/libPusher/headers\"",
+				);
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A8B67F36167FF8FD00BFF575 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ValkeeTalkee.app/ValkeeTalkee";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ValkeeTalkee/ValkeeTalkee-Prefix.pch";
+				INFOPLIST_FILE = "ValkeeTalkeeTests/ValkeeTalkeeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		A8B67F37167FF8FD00BFF575 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ValkeeTalkee.app/ValkeeTalkee";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ValkeeTalkee/ValkeeTalkee-Prefix.pch";
+				INFOPLIST_FILE = "ValkeeTalkeeTests/ValkeeTalkeeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A8B67EE7167FF8FD00BFF575 /* Build configuration list for PBXProject "ValkeeTalkee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8B67F30167FF8FD00BFF575 /* Debug */,
+				A8B67F31167FF8FD00BFF575 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8B67F32167FF8FD00BFF575 /* Build configuration list for PBXNativeTarget "ValkeeTalkee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8B67F33167FF8FD00BFF575 /* Debug */,
+				A8B67F34167FF8FD00BFF575 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8B67F35167FF8FD00BFF575 /* Build configuration list for PBXNativeTarget "ValkeeTalkeeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8B67F36167FF8FD00BFF575 /* Debug */,
+				A8B67F37167FF8FD00BFF575 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A8B67F11167FF8FD00BFF575 /* ValkeeTalkee.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A8B67F12167FF8FD00BFF575 /* ValkeeTalkee.xcdatamodel */,
+			);
+			currentVersion = A8B67F12167FF8FD00BFF575 /* ValkeeTalkee.xcdatamodel */;
+			path = ValkeeTalkee.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A8B67EE4167FF8FD00BFF575 /* Project object */;
+}
