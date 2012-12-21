@@ -7,14 +7,31 @@
 //
 
 #import "VTMasterViewController.h"
+#import "VTDefines.h"
 
 #import "VTDetailViewController.h"
 
+#import "Constants.h"
+#import "PTPusher.h"
+#import "PTPusherChannel.h"
+#import "PTPusherAPI.h"
+#import "PTPusherEvent.h"
+#import "VTPresenceChannelEvents.h"
+
 @interface VTMasterViewController ()
+
+@property (strong, nonatomic) VTPresenceChannelEvents *signallingPresence;
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+
 @end
 
 @implementation VTMasterViewController
+
+@synthesize pusher;
+@synthesize pusherAPI;
+@synthesize currentChannel;
+@synthesize eventsReceived;
+@synthesize signallingPresence = _signallingPresence;
 
 - (void)awakeFromNib
 {
@@ -28,7 +45,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+    eventsReceived = [[NSMutableArray alloc] init];
+
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
     UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshClientObjects:)];
@@ -36,6 +55,13 @@
     
     // If iPhone, splitViewController is nil.
     self.detailViewController = (VTDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    
+    // configure the auth URL for private/presence channels
+    // self.pusher.authorizationURL = [NSURL URLWithString:@"http://localhost:9292/presence/auth"];
+    self.pusher.authorizationURL = [NSURL URLWithString:[AUTH_URL stringByAppendingString: @"/presence/auth"]];
+    
+    [self subscribeToChannel:@"messages"];
+    [self setupSignallingPresenceChannel:[[NSUserDefaults standardUserDefaults] stringForKey:USER_LOGIN_NAME]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,35 +70,62 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Subscribing to Public Channel
+
+- (void)subscribeToChannel:(NSString *)channelName
+{
+    self.currentChannel = [self.pusher subscribeToChannelNamed:channelName];
+    
+    [self.currentChannel bindToEventNamed:@"New-Clients" handleWithBlock:^(PTPusherEvent *event) {
+        [self.tableView beginUpdates];
+        [eventsReceived insertObject:event atIndex:0];
+        //[self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationTop];
+        
+        [self insertNewObject:event];
+        [self.tableView endUpdates];
+    }];
+}
+
+#pragma mark - Actions
+
 - (void)refreshClientObjects:(id)sender
 {
-    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-    NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
-    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
+    [self sendEventWithMessage:[[NSUserDefaults standardUserDefaults] stringForKey:USER_LOGIN_NAME]];
+}
+
+- (void)sendEventWithMessage:(NSString *)message;
+{
+    // construct a simple payload for the event
+    NSDictionary *payload = [NSDictionary dictionaryWithObjectsAndKeys:message, @"message", nil];
     
-    // If appropriate, configure the new managed object.
-    // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
-    
-    // Save the context.
-    NSError *error = nil;
-    if (![context save:&error]) {
-        // Replace this implementation with code to handle the error appropriately.
-        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
+    // send the event after a short delay
+    [self performSelector:@selector(sendEvent:) withObject:payload afterDelay:0.3];
+}
+
+- (void)sendEvent:(id)payload;
+{
+    if (self.pusherAPI == nil) {
+        PTPusherAPI *api = [[PTPusherAPI alloc] initWithKey:PUSHER_API_KEY appID:PUSHER_APP_ID secretKey:PUSHER_API_SECRET];
+        self.pusherAPI = api;
     }
+    // we set the socket ID to nil here as we want to receive the events that we are sending
+    [self.pusherAPI triggerEvent:@"New-Clients"
+                       onChannel:@"messages"
+                            data:payload socketID:self.pusher.connection.socketID];
 }
 
 - (void)insertNewObject:(id)sender
 {
+    PTPusherEvent *event = (PTPusherEvent *)sender;
+    
     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
     NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
     NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
     
     // If appropriate, configure the new managed object.
     // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
+    [newManagedObject setValue:[[event data] objectForKey:@"message"] forKey:@"client"];
+    [newManagedObject setValue:[event timeReceived] forKey:@"timeStamp"];
     
     // Save the context.
     NSError *error = nil;
@@ -82,6 +135,14 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
+}
+
+- (void) setupSignallingPresenceChannel:(id)channelName
+{
+    if (! self.signallingPresence) {
+        _signallingPresence = [[VTPresenceChannelEvents alloc] initWithPusher:self.pusher];
+    }
+    [self.signallingPresence subscribeToPresenceChannel:channelName];
 }
 
 #pragma mark - Table View
@@ -97,9 +158,16 @@
     return [sectionInfo numberOfObjects];
 }
 
+static NSString *EventCellIdentifier = @"EventCell";
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:EventCellIdentifier forIndexPath:indexPath];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:EventCellIdentifier];
+    }
+    
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
@@ -136,6 +204,7 @@
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+        self.detailViewController.pusher = self.pusher;
         self.detailViewController.detailItem = object;
     }
 }
@@ -145,7 +214,9 @@
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+        [[segue destinationViewController] setPusher:self.pusher];
         [[segue destinationViewController] setDetailItem:object];
+
     }
 }
 
@@ -251,7 +322,8 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+    cell.textLabel.text = [object valueForKey:@"client"];
+    cell.detailTextLabel.text = [[object valueForKey:@"timeStamp"] description];
 }
 
 @end

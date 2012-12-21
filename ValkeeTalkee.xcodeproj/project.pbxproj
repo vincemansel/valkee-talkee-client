@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		38CB811EF29D449DAFD2D16C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB51FA578A44FE581F3593E /* libPods.a */; };
+		A80CB4481683E5D5002976F8 /* VTPresenceChannelEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = A80CB4471683E5D5002976F8 /* VTPresenceChannelEvents.m */; };
 		A8B67EF2167FF8FD00BFF575 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B67EF1167FF8FD00BFF575 /* UIKit.framework */; };
 		A8B67EF4167FF8FD00BFF575 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B67EF3167FF8FD00BFF575 /* Foundation.framework */; };
 		A8B67EF6167FF8FD00BFF575 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B67EF5167FF8FD00BFF575 /* CoreGraphics.framework */; };
@@ -65,6 +66,9 @@
 
 /* Begin PBXFileReference section */
 		3DB51FA578A44FE581F3593E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A80CB4461683E5D5002976F8 /* VTPresenceChannelEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTPresenceChannelEvents.h; sourceTree = "<group>"; };
+		A80CB4471683E5D5002976F8 /* VTPresenceChannelEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTPresenceChannelEvents.m; sourceTree = "<group>"; };
+		A80CB44A1683F967002976F8 /* VTDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTDefines.h; sourceTree = "<group>"; };
 		A8B67EED167FF8FD00BFF575 /* ValkeeTalkee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValkeeTalkee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8B67EF1167FF8FD00BFF575 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A8B67EF3167FF8FD00BFF575 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -244,7 +248,10 @@
 				A8B67F17167FF8FD00BFF575 /* VTDetailViewController.h */,
 				A8B67F18167FF8FD00BFF575 /* VTDetailViewController.m */,
 				A8B67F11167FF8FD00BFF575 /* ValkeeTalkee.xcdatamodeld */,
+				A80CB4461683E5D5002976F8 /* VTPresenceChannelEvents.h */,
+				A80CB4471683E5D5002976F8 /* VTPresenceChannelEvents.m */,
 				A8B67EFA167FF8FD00BFF575 /* Supporting Files */,
+				A80CB44A1683F967002976F8 /* VTDefines.h */,
 			);
 			path = ValkeeTalkee;
 			sourceTree = "<group>";
@@ -477,6 +484,7 @@
 				A8B67F8916821AA300BFF575 /* PTPusherConnectionMonitor.m in Sources */,
 				A8B67F8C16821CA200BFF575 /* NSMutableURLRequest+BasicAuth.m in Sources */,
 				A8B67F9616821E6000BFF575 /* NSData+Base64.m in Sources */,
+				A80CB4481683E5D5002976F8 /* VTPresenceChannelEvents.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

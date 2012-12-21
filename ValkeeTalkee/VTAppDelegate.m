@@ -7,6 +7,7 @@
 //
 
 #import "VTAppDelegate.h"
+#import "VTDefines.h"
 
 #import "VTMasterViewController.h"
 
@@ -49,6 +50,8 @@
 {
     VTMasterViewController *controller;
     
+    [self userLogin];
+    
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
         UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
@@ -87,7 +90,18 @@
     [[NSNotificationCenter defaultCenter]
      removeObserver:self name:PTPusherEventReceivedNotification object:self.pusher];
 }
-							
+
+- (void)userLogin {
+    // Dummy Login process to establish a unique user name
+    
+    NSString *deviceName = [[[UIDevice currentDevice] name] stringByReplacingOccurrencesOfString:@" " withString:@""];
+    deviceName = [deviceName stringByReplacingOccurrencesOfString:@"'" withString:@""];
+    deviceName = [deviceName stringByReplacingOccurrencesOfString:@"\u2019" withString:@""];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:deviceName forKey:USER_LOGIN_NAME];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 - (void)saveContext
 {
     NSError *error = nil;
@@ -260,8 +274,8 @@
  authentication/authorisation needs.
  */
 
-#define CHANNEL_AUTH_USERNAME @"foo"
-#define CHANNEL_AUTH_PASSWORD @"bar"
+#define CHANNEL_AUTH_USERNAME @"admin"
+#define CHANNEL_AUTH_PASSWORD @"letmein"
 
 - (void)pusher:(PTPusher *)pusher willAuthorizeChannelWithRequest:(NSMutableURLRequest *)request
 {

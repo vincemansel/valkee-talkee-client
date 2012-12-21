@@ -7,13 +7,21 @@
 //
 
 #import "VTDetailViewController.h"
+#import "VTPresenceChannelEvents.h"
+#import "PTPusher.h"
+
 
 @interface VTDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
+@property (strong, nonatomic) VTPresenceChannelEvents *signallingPresence;
+
 - (void)configureView;
 @end
 
 @implementation VTDetailViewController
+
+@synthesize pusher;
+@synthesize signallingPresence = _signallingPresence;
 
 #pragma mark - Managing the detail item
 
@@ -36,7 +44,10 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
+        NSString *calledUserName = [self.detailItem valueForKey:@"client"];
+        self.detailDescriptionLabel.text
+          = [@"Calling " stringByAppendingString:calledUserName ];
+        [self setupSignallingPresenceChannel:calledUserName];
     }
 }
 
@@ -52,6 +63,15 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void) setupSignallingPresenceChannel:(id)channelName
+{
+    if (! self.signallingPresence) {
+        _signallingPresence = [[VTPresenceChannelEvents alloc] initWithPusher:self.pusher];
+    }
+    [self.signallingPresence subscribeToPresenceChannel:channelName];
+}
+
 
 #pragma mark - Split view
 

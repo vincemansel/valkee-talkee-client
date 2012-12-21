@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <Opentok/Opentok.h>
 
+@class PTPusher;
+
 @interface VTDetailViewController : UIViewController <UISplitViewControllerDelegate>
 
 @property (strong, nonatomic) id detailItem;
+@property (nonatomic, strong) PTPusher *pusher;
 
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @end
